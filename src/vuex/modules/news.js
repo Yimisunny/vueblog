@@ -18,8 +18,7 @@ export default {
 
   actions: {
     getAllNewsAction: ({commit}, page=1) => {
-      /*rap.taobao.org/mockjs/7312/api/personal/news*/
-     Vue.http.get("http://rap.taobao.org/mockjs/26445/api/personal/news", {params: {page: page}})
+     Vue.http.get("http://rap.taobao.org/mockjs/7312/api/personal/news", {params: {page: page}})
         .then(res => {
           console.log(res);
           commit(type.GET_NEWS_DATA, res.body);
